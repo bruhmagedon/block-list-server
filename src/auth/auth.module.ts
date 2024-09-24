@@ -11,7 +11,7 @@ import { JwtModule } from "@nestjs/jwt";
     UsersModule,
     // Сервис jwt, чтобы использовать его внутри модуля
     JwtModule.register({
-      global: true,
+      global: true, // модуль доступен глобально в приложении
       secret: process.env.JWT_SECRET, //key на основании которого будет генерироваться jwt
       signOptions: { expiresIn: "1d" } //Сколько будет доступен токен (1dень)
     })

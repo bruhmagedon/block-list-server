@@ -5,7 +5,7 @@ import { CookieService } from "./cookie.service";
 import { JwtService } from "@nestjs/jwt";
 
 @Injectable()
-// Guard - ограничение доступа
+// Guard - ограничение доступа (проверяет сессию и записывает инфу о токене в repsonse)
 export class AuthGuard implements CanActivate {
   constructor(private jwtService: JwtService) {}
 
